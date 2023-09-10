@@ -118,8 +118,6 @@ const ContactMeProbando = () => {
 
     setIsLoading(true)
 
-    console.log('e.target', e.target)
-
     fetch('https://formsubmit.co/af65f212b60c83d937015778adf4fd56', {
       method: 'POST',
       body: new FormData(e.target)
@@ -127,17 +125,12 @@ const ContactMeProbando = () => {
       .then((res) => {
         setIsLoading(false)
 
-        console.log('res', res)
-        console.log('exito')
-
         localStorage.removeItem('contactMeData')
 
         submitSuccess()
       })
       .catch((error) => {
         submitFail()
-
-        console.log('error', error)
       })
 
     // action='https://formsubmit.co/af65f212b60c83d937015778adf4fd56' method='POST'

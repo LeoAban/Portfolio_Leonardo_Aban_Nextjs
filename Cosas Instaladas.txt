@@ -1,0 +1,71 @@
+PRIMEROS PASOS:
+
+//Instale nextjs
+
+//Para inicializar el proyecto
+--> npm run dev
+//Instalar ESLinter, es necesario tambien instalar la extentension ESLint
+npm install standard -D
+
+EXTENSIONES:
+1) error lens: //Agregue Delay:500, Message Background Mode: message
+2) console ninja
+3) Auto Rename Tag
+4) ESLint //Tambien instalar npm install standard -D
+Theme: 
+1) one dark pro
+
+
+
+SETTINGS:
+"workbench.colorTheme": "One Dark Pro Darker",
+"oneDarkPro.bold": true,"oneDarkPro.vivid": true,
+"editor.fontFamily": "'Cascadia Code PL', Consolas, 'Courier New', monospace",
+"editor.fontLigatures": true,
+"eslint.validate": [ "javascript", "javascriptreact", "html"],
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true,
+}
+
+https://youtu.be/uyEUVgNMvGI
+
+wordwrap: on
+
+
+
+
+SNIPPETS: 
+
+
+"import":{
+	"prefix": "imp",
+	"body": [
+	"import ${2:values} from '${1:specifier}';$0"
+	],
+	"description": "import statement"
+}
+
+
+
+//Junto a la extension de ESLint y el install de standard -D
+package.json: //El de rules es porque quiere que todas las constantes esten en mayusculas, y no quiero q sea asi por eso le pongo camelcase: off
+
+"eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "rules": {    
+      "camelcase": "off"
+    }
+} 
+
+INSTALANDO BLIBLIOTECAS 
+
+// no lo instale al final // npm install framer-motion -E // Para animaciones
+
+
+
+// instalando para hacer los lenguajes // npm i @formatjs/intl-localematcher -E
+// Tengo que envolver toda la app en [lang] para saber q lenguaje esta usando
+
+// Tambien para el middleware de lenguajes // npm install negotiator -E

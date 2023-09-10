@@ -37,6 +37,9 @@
 }
 
 .curriculum, .mail{
+    
+    color: var(--footer-text); 
+    transition: color var(--transition-time-slow) ease-in-out;
     cursor: pointer;
     background: transparent;
     border: none;

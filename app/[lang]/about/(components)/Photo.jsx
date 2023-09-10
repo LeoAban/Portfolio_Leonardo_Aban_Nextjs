@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const Photo = () => {
   return (
     <div className={styles.container}>
-      <Image src='/static/images/blackWhite.png' alt='photoB&W' width={225} height={320} />
+      <Image src='/blackWhite.png' alt='photoB&W' width={225} height={320} />
     </div>
   )
 }

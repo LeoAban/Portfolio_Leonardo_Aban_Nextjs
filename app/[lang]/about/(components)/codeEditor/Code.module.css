@@ -1,0 +1,108 @@
+
+.editorCode{
+    padding: 1rem;
+
+    height: 100%;
+
+    position: relative;
+}
+
+.overlayBlured{
+    background-color: rgba(255, 255, 255, 0.068);    
+    backdrop-filter: blur(3px);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.editorCode ::selection {
+    background-color: transparent;
+}
+
+.editorCodeContent{
+    border-radius: 0.3em;
+    /* padding: 0.1em; */
+
+    word-wrap: normal;
+    background: none;
+    color: #fff;
+    hyphens: none;
+
+    line-height: 1.5;
+    tab-size: 4;
+
+    text-align: left;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: pre;
+    
+    border-width: 0;
+    
+    font-size: inherit;
+    font-weight: inherit;
+
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace;
+}
+
+
+.editorCodeContent pre{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal;
+}
+
+
+
+.htmlTag{    
+    color: #f22c3d;
+}
+
+.cursorWrapper{
+    position: relative;
+    z-index: 3;
+}
+
+.cursor{
+    cursor: text;
+    height: 21px;
+    border-left-color: #fff;
+
+    
+    position: absolute;
+    pointer-events: none;
+
+
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-right: none;
+    width: 0;
+
+    z-index: 3;
+}
+
+.codeDiv{
+    display: inline-block;
+}
+
+.selection{
+    position: relative;
+    z-index: 1;
+}
+
+.selection{
+    position: relative;
+    z-index: 1;
+}
+
+.selectionPart{
+    
+    position: absolute;
+    background: rgba(255,255,255,.05);
+}
+
+.line span{
+    font-size: 14px;
+}

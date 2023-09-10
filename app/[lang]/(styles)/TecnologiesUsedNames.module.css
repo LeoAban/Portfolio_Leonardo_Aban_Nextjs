@@ -1,0 +1,123 @@
+.animation {
+    
+    width: 300px;
+    font-size: 1.7rem;
+    overflow:hidden;
+
+    position: relative;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    flex: 1;
+}
+
+.animation div {
+    display:inline-block;
+    padding: 0;
+
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    transition: transform 1s;
+
+
+    width: 100%;
+
+}
+
+.animation div div{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100% - 20px);
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+
+    width: fit-content;
+}
+
+
+
+
+.first div {
+    background-color: var(--home-tecnologies-1);
+    color: var(--home-tecnologies-text-black);
+}
+
+.second div {
+    background-color:var(--home-tecnologies-2);
+    color: var(--home-tecnologies-text-white);
+}
+
+.third div {
+    background-color:var(--home-tecnologies-3);
+    color: var(--home-tecnologies-text-black);
+}
+
+.fourth div {
+    background-color: var(--home-tecnologies-4);
+    color: var(--home-tecnologies-text-white);
+}
+
+.fifth div {
+    background-color: var(--home-tecnologies-5);
+    color: var(--home-tecnologies-text-white);
+}
+
+.sixth div {
+    background-color: var(--home-tecnologies-6);
+    color: var(--home-tecnologies-text-white);
+}
+
+  
+@media (max-width: 700px){ 
+
+
+    .animation {
+    
+        font-size: 1.5rem;
+    }
+    
+
+}
+
+
+
+@media (max-width: 500px){ 
+
+
+    
+
+    .animation {
+    
+        font-size: 1.3rem;
+    }
+    
+
+}
+
+@media (max-width: 350px){ 
+
+
+    .animation {
+    
+        font-size: .8rem;
+    }
+}

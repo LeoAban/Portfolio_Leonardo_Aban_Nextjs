@@ -1,0 +1,121 @@
+.dropdown {
+
+    color: var(--text);
+    background-color: transparent;
+    transition: color var(--transition-time-lang) ease-in-out, border-color var(--transition-time-lang) ease-in-out;
+
+    text-transform: uppercase;
+    padding: 5px;
+    border: 1px solid var(--text);
+    position: relative;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+}
+
+.dropdown label{
+    cursor: pointer;
+}
+
+.dropdownList{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.option {
+    border: 1px solid var(--text);
+    transition: border-color var(--transition-time-lang) ease-in-out;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.optionActive {
+    border: 1px solid var(--text);
+    transition: border-color var(--transition-time-lang) ease-in-out;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 160, 160, 0.199);
+}
+
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid var(--text); 
+  display: inline-block;
+  margin-left: 5px; 
+  vertical-align: middle; 
+  transform: rotate(90deg); 
+
+  transition: transform 100ms, border-color var(--transition-time-lang) ease-in-out;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .dropdown {
+        font-size: 14px;
+    }
+    .option {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .dropdown {
+        font-size: 12px;
+    }
+    .option {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dropdown {
+        font-size: 10px;
+    }
+    .option {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .dropdown {
+        font-size: 8px;
+    }
+    .option {
+        font-size: 8px;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    .dropdown {
+        font-size: 7px;
+    }
+    .option {
+        font-size: 7px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .dropdown {
+        font-size: 6px;
+    }
+    .option {
+        font-size: 6px;
+    }
+}

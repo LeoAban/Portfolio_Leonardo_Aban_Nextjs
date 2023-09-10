@@ -29,7 +29,6 @@ export function middleware (request) {
   }
 
   const { pathname } = request.nextUrl
-  console.log('pathname', pathname)
 
   const newUrl = new URL(`/${locale}${pathname}`, request.nextUrl)
 

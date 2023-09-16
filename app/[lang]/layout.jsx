@@ -12,10 +12,7 @@ import { defaultLocale } from '@/i18n.config'
 import { cookies } from 'next/headers'
 import { colorPalette } from '@/constants/colorPalette'
 
-export const config = {
-  runtime: 'nodejs',
-}
- 
+export const runtime = 'nodejs' 
 
 export default function RootLayout ({ children, params }) {
   const { lang } = params

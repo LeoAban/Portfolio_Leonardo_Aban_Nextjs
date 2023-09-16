@@ -15,7 +15,7 @@ import { colorPalette } from '@/constants/colorPalette'
 
 export default function RootLayout ({ children, params }) {
   const { lang } = params
-  // const nextCookies = cookies()
+  const nextCookies = cookies()
 
   // const darkModeCookie = nextCookies.get('NEXT_DARKMODE')
   // const { value } = darkModeCookie

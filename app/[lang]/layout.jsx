@@ -9,19 +9,18 @@ import './global.css'
 
 import { defaultLocale } from '@/i18n.config'
 
-import { cookies } from 'next/headers'
+// import { cookies } from 'next/headers'
 import { colorPalette } from '@/constants/colorPalette'
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 
 export default function RootLayout ({ children, params }) {
   const { lang } = params
-  const nextCookies = cookies()
+  // const nextCookies = cookies()
 
-  const darkModeCookie = nextCookies.get('NEXT_DARKMODE')
-  const { value } = darkModeCookie
-  const isDarkMode = value !== 'false'
+  // const darkModeCookie = nextCookies.get('NEXT_DARKMODE')
+  // const { value } = darkModeCookie
+  // const isDarkMode = value !== 'false'
+  const isDarkMode = true
 
   return (
     <html lang={lang ?? defaultLocale} style={colorPalette[isDarkMode]}>

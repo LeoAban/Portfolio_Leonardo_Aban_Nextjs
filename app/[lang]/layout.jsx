@@ -9,7 +9,7 @@ import './global.css'
 
 import { defaultLocale } from '@/i18n.config'
 
-// import { cookies } from 'next/headers'
+import { cookies } from 'next/headers'
 import { colorPalette } from '@/constants/colorPalette'
 
 

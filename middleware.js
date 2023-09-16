@@ -18,18 +18,6 @@ function getLocale (request) {
   return matchLocale(languages, locales, defaultLocale)
 }
 
-// getLocale de un video
-// function getLocale (request) {
-//   const negotiatorHeaders = {}
-//   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
-
-//   // @ts-ignore locales are readonly
-//   const locales = i18n.locales
-//   const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
-
-//   const locale = matchLocale(languages, locales, i18n.defaultLocale)
-//   return locale
-// }
 
 export function middleware (request) {
   const locale = getLocale(request) ?? defaultLocale
@@ -49,16 +37,6 @@ export function middleware (request) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-
-    // Pongo lo q evita el middleware, en este caso a pdf e image para mis archivos en public
     '/((?!api|_next|_next/static|_next/image|favicon.ico|image|pdf).*)'
-
-    // '/((?!api|_next/static|_next/image|favicon.ico).*)'
-
-    // '/((?!_next|api|favicon.ico).*)'
-
-    // Optional: only run on root (/) URL
-    // '/'
   ]
 }

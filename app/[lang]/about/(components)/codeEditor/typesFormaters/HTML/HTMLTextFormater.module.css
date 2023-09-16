@@ -1,0 +1,27 @@
+/*HTML Code styles*/
+
+.operator{
+    color: rgb(164, 226, 228)
+}
+
+.property{
+    color: rgb(224, 154, 24)
+}
+
+.tag{
+    color: rgb(226, 42, 42)
+}
+
+.text{
+    color: rgb(209, 209, 209)
+}
+
+.error{
+    color: rgb(255, 61, 61);
+    text-decoration: underline;
+    
+}
+
+
+
+/*END HTML Code styles*/

@@ -1,7 +1,5 @@
 PRIMEROS PASOS:
 
-//deploy
-
 //Instale nextjs
 
 //Para inicializar el proyecto

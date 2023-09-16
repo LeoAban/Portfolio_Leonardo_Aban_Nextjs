@@ -13,6 +13,7 @@ import { cookies } from 'next/headers'
 import { colorPalette } from '@/constants/colorPalette'
 
 export const runtime = 'nodejs' 
+export const dynamic = 'force-dynamic'
 
 export default function RootLayout ({ children, params }) {
   const { lang } = params

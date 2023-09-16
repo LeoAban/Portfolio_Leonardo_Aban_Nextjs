@@ -17,7 +17,7 @@ export default function RootLayout ({ children, params }) {
   const { lang } = params
   const nextCookies = cookies()
 
-  // const darkModeCookie = nextCookies.get('NEXT_DARKMODE')
+  const darkModeCookie = nextCookies.get('NEXT_DARKMODE')
   // const { value } = darkModeCookie
   // const isDarkMode = value !== 'false'
   const isDarkMode = true

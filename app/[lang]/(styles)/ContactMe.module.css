@@ -1,0 +1,543 @@
+.overlay {
+
+
+  --modalHeight: 400px;
+  --modalWidth: 800px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: var(--contactme-overlay);
+  transition: border-color var(--transition-time-fsat) ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  overflow: auto;
+  z-index: 9999;
+  pointer-events:fill;
+
+}
+
+.wrapper {
+
+
+  --modalHeight: 200px;
+  --modalWidth: 500px;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  margin-right: 60px;
+
+  
+  overflow: auto;
+  z-index: 9999;
+  pointer-events:fill;
+
+}
+  
+.modal {
+
+
+
+  -webkit-font-smoothing: antialiased;
+
+
+  width: var(--modalWidth);
+
+  position: relative;
+  pointer-events: all;
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  margin: 0;
+
+  background-color: var(--contactme-message-bg);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+
+
+  -webkit-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+  -webkit-box-shadow: 0px 8px 10px 1px rgba(0,0,0,.14), 0px 3px 14px 2px rgba(0,0,0,.12), 0px 5px 5px -3px rgba(0,0,0,.2);
+  box-shadow: 0px 8px 10px 1px rgba(0,0,0,.14), 0px 3px 14px 2px rgba(0,0,0,.12), 0px 5px 5px -3px rgba(0,0,0,.2);
+
+  overflow: hidden;
+}
+
+.form{
+  flex-grow: 1;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado{
+  background-color: var(--contactme-title-bg);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.encabezadoError{
+  background-color: var(--contactme-title-bg-error);
+  transition: background-color var() ease-in-out;
+}
+
+.encabezadoSuccess{
+  background-color: var(--contactme-title-bg-success);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+}
+
+.encabezadoTitle{
+
+  user-select: none;
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+
+  
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+
+  margin-left: 16px;
+  
+  letter-spacing: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+
+  font-weight: 500;
+  color: var(--contactme-title-text);
+  text-shadow:0px 0px .1px var(--contactme-title-text);
+  transition: color var(--transition-time-fast) ease-in-out, text-shadow var(--transition-time-fast) ease-in-out;
+
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.modalButtons{
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  padding: 0  6px 0 4px;
+  font-size: .875rem;
+
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+  
+.body{    
+  background-color: var(--contactme-message-bg);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  padding: 0 16px;
+  color: #222;
+  font-size: .875rem;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contactInfo{
+
+}
+
+.remitter{
+    
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+
+}
+
+.subject{
+    
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+
+}
+
+
+.message{
+    
+  height: var(--modalHeight);
+  flex: auto;
+  display: flex;
+}
+
+.message textarea{
+  
+  font-family: var(--googleSans-font), var(--roboto-font);
+  font-size: 14px;
+
+  border: none;
+  outline: none;
+  width: 100%;
+
+  flex: auto;
+
+  resize: none;
+
+  color: var(--contactme-message-text);
+  background-color: var(--contactme-message-bg);
+  transition: background-color var(--transition-time-fast) ease-in-out, color var(--transition-time-fast) ease-in-out;
+}
+
+
+  
+.body input{
+
+  font-size: 14px;
+
+  border: none;
+  outline: none;
+  width: 100%;
+
+  color: var(--contactme-message-text); 
+  background-color: var(--contactme-message-bg);
+  transition: background-color var(--transition-time-fast) ease-in-out, color var(--transition-time-fast) ease-in-out;
+
+}
+
+.body input::placeholder {
+  user-select: none;
+
+  color: var(--contactme-message-placeholder);
+  transition: color var(--transition-time-fast) ease-in-out;
+}
+
+
+.footer{
+  
+  padding: 12px 16px 16px;
+
+}
+
+
+.send{
+  cursor: pointer;
+  width: 100px;
+  height: 36px;
+  font-size: 14px;
+  border: none;
+  border-radius: 80px;
+  background-color: var(--contactme-button-bg);
+  color: var(--contactme-button-text);
+  transition: background-color var(--transition-time-fast) ease-in-out, color var(--transition-time-fast) ease-in-out;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendSuccess{
+  background-color: var(--contactme-button-bg-success);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+}
+
+.sendError{
+  background-color: var(--contactme-button-bg-error);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+}
+
+.modalButtons button {
+  user-select: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 14px;
+
+  height: 100%;
+  width: 30px;
+}  
+  
+.modalButtons button:hover {
+  font-weight: 600;
+}
+
+
+.minimize{
+  font-size: 22px;
+}
+
+.sendText{    
+  flex: 1;
+  text-align: center;
+}
+
+/* 
+.spinner {
+
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    margin: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+.form{
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+} */
+
+.loading {
+  position: relative;
+  margin: 0;
+  transform: scale(0.3) translate(40px, -5px);
+}
+
+.loader {
+  position: absolute;
+  content: '';
+  top: calc(50% - 2.5rem);
+  left: calc(50% - 2.5rem);
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid var(--contactme-button-loader);
+
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0rem 0rem 0.6rem rgba(0,0,0,0.3);
+  animation: spin 1s linear infinite;
+  
+  transition: border-color var(--transition-time-fast) ease-in-out, border-top var(--transition-time-fast) ease-in-out;
+}
+
+.success {
+  background-color: var(--contactme-button-text-success);
+  border-color: var(--contactme-button-text-success);
+  transition: background-color var(--transition-time-fast) ease-in-out, border-color 1s ease-in-out;
+}
+
+.fail {
+  background: var(--contactme-button-text-error);
+  border-color: var(--contactme-button-text-error);
+  transition: background-color var(--transition-time-fast) ease-in-out, border-color 1s ease-in-out;
+}
+
+
+.success::before {
+  height: 7px;
+  width: 2.5rem;
+  position: absolute;
+  top: 65%;
+  left: 44%;
+  background-color: var(--contactme-button-loader-success);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  transform: rotate(-45deg);
+  transform-origin: 0% 50%;
+  border-radius: 5px;
+  animation: baseGrow .5s;
+  content: '';
+}
+  
+.success::after {
+  height: 7px;
+  width: 1.5rem;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  background-color: var(--contactme-button-loader-success);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  transform: rotate(-135deg);
+  transform-origin: 0% 50%;
+  border-radius: 5px;
+  animation: tipGrow .5s;
+  content:'';
+}  
+
+.fail::before {
+  width: 3rem;
+  height: 0.5rem;
+  background-color: var(--contactme-button-loader-error);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  transform-origin: 50% 50%;
+  top: calc(50% - 0.25rem);
+  left: calc(50% - 1.5rem);
+  transform: rotate(45deg);
+  position: absolute;
+  content: '';
+  border-radius: 10px;
+  animation: leftIn 0.3s linear;
+  content: '';
+}
+  
+.fail::after {
+  width: 3rem;
+  height: 0.5rem;
+  background-color: var(--contactme-button-loader-error);
+  transition: background-color var(--transition-time-fast) ease-in-out;
+
+  transform-origin: 50% 50%;
+  top: calc(50% - 0.25rem);
+  right: calc(50% - 1.5rem);
+  transform: rotate(-45deg);
+  position: absolute;
+  content: '';
+  border-radius: 10px;
+  animation: rightIn 0.3s linear;
+  content:'';
+} 
+
+.success, .fail {
+  animation: pop 1.2s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-top: 7px solid var(--contactme-button-loader-spin);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top: 7px solid var(--contactme-button-loader-spin);
+
+  }
+}
+
+@keyframes tipGrow {
+  0% {
+    width: 0px;
+    left: 0;
+    top: 0;
+  }
+  25% {
+    width: 0px;
+    left: 0;
+    top: 0; 
+  }
+  50% {
+    top: 0%;
+    left: 0%;
+    width: 0;
+  }
+  75% {
+    top: 0%;
+    left: 0%;
+    width: 0rem;
+  }
+  100% {
+    top: 65%;
+    left: 50%;
+    width: 1.5rem;
+  }
+}
+
+@keyframes baseGrow {
+  0% {
+
+    width: 0;
+  }
+  90% {
+    width: 0;
+  }
+  100% {
+
+    width: 2.5rem;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);    
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes leftIn {
+  0% {
+    left: 0;
+    top: 0;
+    width: 0;
+  }
+  100% {
+    top: calc(50% - 0.25rem);
+    left: calc(50% - 1.5rem);
+    width: 3rem;
+  }
+}
+
+@keyframes rightIn {
+  0% {
+    rigth: 0;
+    top: 0;
+    width: 0;
+  }
+  100% {
+    top: calc(50% - 0.25rem);
+    right: calc(50% - 1.5rem);
+    width: 3rem;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+
+
+  .wrapper {
+    --modalHeight: 150px;
+    --modalWidth: 100%;
+  
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    margin: 0;
+  
+  }
+
+    
+  .overlay .modal{
+    height: 100%;
+  }
+    
+
+  
+}
+

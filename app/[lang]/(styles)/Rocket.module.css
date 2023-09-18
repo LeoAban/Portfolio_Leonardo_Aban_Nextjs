@@ -1,0 +1,106 @@
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+
+.scene{
+    position: relative;
+    width: 8em;
+    height: 18em;
+    /* width: 100%;
+    height: 100vh; */
+    /* background: #01070a; */
+    background: transparent;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.scene i{
+    position:absolute;
+    top: -250px;
+    /* background: rgba(255,255,255,0.5); */
+    background-color: var(--home-stars);
+    animation: animationStars linear infinite;
+    transition: background-color var(--transition-time-slow) ease-in-out;
+    
+}
+
+@keyframes animationStars {
+    0%{
+        transform: translatey(0);
+    }
+    100%{
+        transform: translateY(30em);
+    }
+}
+
+.scene .rocket{
+    position: relative;
+    animation: animate 0.2s ease infinite;
+
+}
+
+
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+}
+
+.rocket{    
+    bottom: 30px;
+}
+
+.scene .rocket::before{
+    content: '';
+    position: absolute;
+    bottom: -75px;
+    left: calc(50% - 1px);
+    transform: translateX(-50%);
+    width: 10px;
+    height: 80px;
+    background: linear-gradient(#ffe600,#ff7300, #ff3300, transparent);
+}
+
+.scene .rocket::after{
+    content: '';
+    position: absolute;
+    bottom: -75px;
+    left: calc(50% - 1px);
+    transform: translateX(-50%);
+    width: 10px;
+    height: 80px;
+    background: linear-gradient(#ff7300, transparent);
+    filter: blur(20px);
+}
+
+.pilot{
+    position: absolute;
+    right: 35.5px;
+    top: 30px;
+}
+
+.passanger1{
+    position: absolute;
+    right: 40.5px;
+    top: 62px;
+}
+
+.passanger2{
+    position: absolute;
+    right: 40.5px;
+    top: 85px;
+}

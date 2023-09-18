@@ -1,5 +1,7 @@
 import styles from '../(styles)/Project.module.css'
 
+import Link from 'next/link'
+
 export const Project = ({ img, title, subtitle, description }) => {
   return (
     <div className={styles.project}>
@@ -8,9 +10,9 @@ export const Project = ({ img, title, subtitle, description }) => {
 
         <div className={styles.data}>
           <span className={styles.articleTitle}>{title}</span>
-          <div className={styles.articleLink}>
+          <Link href='https://youtu.be/JvGFWqf7DRc?si=nGLX-wmzk3XkREnv' target='_blank' className={styles.articleLink}>
             <h2 className={styles.articleLinkTitle}>{subtitle}</h2>
-          </div>
+          </Link>
           <p className={styles.description}>{description}</p>
         </div>
       </article>
